@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration form</title>
+</head>
+<body>
+<center>
+	<h2>Registration Form</h2>
+<form action="{{ url_for("register")}}" method="post">
+Name : <input type="text" name="user"><br><br>
+Email id : <input type="text" name="email"><br><br>
+Phone Number : <input type="text" name="phone"><br><br>
+<input type="submit" value="Submit"><br>
+</form>
+</center>
+</body>
+</html>

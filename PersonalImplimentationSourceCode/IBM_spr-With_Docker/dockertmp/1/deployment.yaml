@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app-simple-login-node-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLables:
+      app: flasknode
+  template:
+    metadata:
+      lables:
+        app: flasknode
+    spec:
+      containers:
+        name: flasknode
+        image: icr.io/ibm-cad/ibm-cad
+        imagePullPolicy: Always
+        ports:
+          containerPort: 5000

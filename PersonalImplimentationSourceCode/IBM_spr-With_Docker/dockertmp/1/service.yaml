@@ -1,0 +1,12 @@
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-app-simple-login-node-deployment  
+spec:
+  ports:
+    port: 80
+    targetPort: 5000
+  selector:
+    app: flasknode
+
